@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74330fe5-c99c-47e4-b1f4-f20968482cdf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tblPaciente_A."nomPac" AS tblPaciente_A_nomPac,
+     tblPaciente_A."direPac" AS tblPaciente_A_direPac,
+     tblPaciente_A."telPac" AS tblPaciente_A_telPac,
+     tblPaciente_A."emailPac" AS tblPaciente_A_emailPac
+FROM
+     "dbo"."tblPaciente" tblPaciente_A]]>
+	</queryString>
+	<field name="tblPaciente_A_nomPac" class="java.lang.String"/>
+	<field name="tblPaciente_A_direPac" class="java.lang.String"/>
+	<field name="tblPaciente_A_telPac" class="java.lang.String"/>
+	<field name="tblPaciente_A_emailPac" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="213" y="0" width="129" height="20" uuid="3eba1ef6-d046-41b5-8d48-23fd1e766e52"/>
+				<text><![CDATA[REPORTE DE PACIENTES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b5fc7f32-14b6-4385-bf84-a705d8d9051b"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="0" width="100" height="20" uuid="85e5107a-e1e5-45d9-a0d6-980c922b2372"/>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="100" height="20" uuid="f3f1790e-a95a-4396-b23d-21543746af70"/>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="0" width="100" height="20" uuid="eb7b3df1-2de1-4897-bd2e-733ff213cf71"/>
+				<text><![CDATA[Correo Electronico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="555" height="1" uuid="9d2ac474-bef3-4f11-b134-a4b800a04b91"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="20" uuid="90ccd17e-dac5-4aaa-b393-724196f36e69"/>
+				<textFieldExpression><![CDATA[$F{tblPaciente_A_nomPac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="10" width="100" height="20" uuid="5380693a-a348-4def-8b6c-f13a2f114209"/>
+				<textFieldExpression><![CDATA[$F{tblPaciente_A_direPac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="20" uuid="0415c9c1-1932-4016-ae78-e131b75bac96"/>
+				<textFieldExpression><![CDATA[$F{tblPaciente_A_telPac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="10" width="100" height="20" uuid="f9309a95-fab9-424e-bfee-47f034d5bbf8"/>
+				<textFieldExpression><![CDATA[$F{tblPaciente_A_emailPac}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="33" width="555" height="1" uuid="fe0309b7-e0fb-480f-8dd9-3f34927e7dc7"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
